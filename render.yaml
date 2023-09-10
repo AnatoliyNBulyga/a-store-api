@@ -3,9 +3,10 @@ services:
     name: a-store
     env: docker
     dockerfilePath: ./Dockerfile.prod
-    plan: starter
+    plan: free
     region: frankfurt
-    buildCommand: npm install && npm build
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
     healthCheckPath: /_health
     disk:
       name: a-store-uploads
